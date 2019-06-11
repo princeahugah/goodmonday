@@ -1,0 +1,26 @@
+{
+  "name": "goodmonday",
+  "version": "1.0.0",
+  "description": "code challenge",
+  "main": "index.js",
+  "author": "Prince Ahugah",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "lint": "eslint --fix ./src/*.js",
+    "test": "mocha -R spec --require babel-register"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "eslint": "^5.16.0",
+    "eslint-config": "^0.3.0",
+    "mocha": "^6.1.4"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
+}
