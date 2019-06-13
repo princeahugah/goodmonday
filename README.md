@@ -8,3 +8,7 @@ for the list [1,1] no pairs are formed only two single elements. The max. sum is
 
 You choose how input/output is handled etc.
 
+Run:
+yarn install
+yarn run test
+yarn run start
