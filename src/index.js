@@ -60,7 +60,7 @@ export default function findMaximumSum(A) {
 				sequence += (sequence !== '') ? ` + (${arr[j]} * ${arr[j - 1]})` : `(${arr[j]} * ${arr[j - 1]})`;
 			} else {
 				sum += arr[j] + arr[j - 1];
-				sequence += (sequence !== '') ? ` + (${arr[j]} + ${arr[j - 1]})` : `(${arr[j]} + ${arr[j - 1]})`;
+				sequence += (sequence !== '') ? ` + ${arr[j]} + ${arr[j - 1]}` : `${arr[j]} + ${arr[j - 1]}`;
 			}
 		}
 		else {
@@ -75,7 +75,7 @@ export default function findMaximumSum(A) {
 			sequence += (sequence !== '') ? ` + (${arr[i]} * ${arr[j]})` : `(${arr[i]} * ${arr[j]})`;
 		} else {
 			sum += arr[i] + arr[j];
-			sequence += (sequence !== '') ? ` + (${arr[i]} + ${arr[j]})` : `(${arr[i]} + ${arr[j]})`;
+			sequence += (sequence !== '') ? ` + ${arr[i]} + ${arr[j]}` : `${arr[i]} + ${arr[j]}`;
 		}
 	}
 	// Handle cases where positive and negative numbers are even in counts. 
