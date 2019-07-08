@@ -10,5 +10,5 @@ You choose how input/output is handled etc.
 
 Run:
 yarn install
-yarn run test
-yarn run start
+yarn test
+yarn start

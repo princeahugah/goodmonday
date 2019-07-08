@@ -32,7 +32,7 @@ describe('Find Maximum Sum Test', () => {
         assert.deepEqual(sum, -6);
     });
 
-    it('should return 2 given [-10,1,1,1,1] as input', () => {
+    it('should return 2 given [1,1] as input', () => {
         const { sum } = findMaximumSum([1,1]);
         assert.deepEqual(sum, 2);
     });

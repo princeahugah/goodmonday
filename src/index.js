@@ -9,7 +9,7 @@ function compare(a, b) {
 	if (b > a) {
 		return -1;
 	}
-	if (b < a) {
+	else if (b < a) {
 		return 1;
 	}
 	return 0;
@@ -23,7 +23,7 @@ function compare(a, b) {
  * @returns {boolean}
  */
 function isProductGreaterThanSum(a, b) {
-	return (a * b > a + b) ? true : false;
+	return a * b > a + b;
 }
 
 /**
@@ -58,7 +58,8 @@ export default function findMaximumSum(A) {
 			if (isProductGreaterThanSum(arr[j], arr[j - 1])) {
 				sum += arr[j] * arr[j - 1];
 				sequence += (sequence !== '') ? ` + (${arr[j]} * ${arr[j - 1]})` : `(${arr[j]} * ${arr[j - 1]})`;
-			} else {
+			}
+			else {
 				sum += arr[j] + arr[j - 1];
 				sequence += (sequence !== '') ? ` + ${arr[j]} + ${arr[j - 1]}` : `${arr[j]} + ${arr[j - 1]}`;
 			}
@@ -73,7 +74,8 @@ export default function findMaximumSum(A) {
 		if (isProductGreaterThanSum(arr[i], arr[j])) {
 			sum += arr[i] * arr[j];
 			sequence += (sequence !== '') ? ` + (${arr[i]} * ${arr[j]})` : `(${arr[i]} * ${arr[j]})`;
-		} else {
+		}
+		else {
 			sum += arr[i] + arr[j];
 			sequence += (sequence !== '') ? ` + ${arr[i]} + ${arr[j]}` : `${arr[i]} + ${arr[j]}`;
 		}
